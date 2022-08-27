@@ -1,11 +1,14 @@
+"use strict"
 import _ from 'lodash';
+import button from './components/button/button';
 
-function component() {
-    const element = document.createElement('div');
-  
-    element.innerHTML = _.join(['Hello', 'webpack'], ' ');
-  
-    return element;
-  }
-  
-  document.body.appendChild(component());
+function app() {
+  const app = document.createElement('div');
+  app.classList.add('app')
+  element.append(button('click'))
+  return element;
+}
+
+window.addEventListener('load', () => {
+  document.body.appendChild(app());
+})
